@@ -30,7 +30,7 @@ readmeMaker for GitHub
 
 `Project description:`
 
-How to use the ReadmeMaker.py
+How to use the readmeMaker.py
 
 `Usage:`
 
@@ -96,4 +96,5 @@ script_for_fun.py       python scripts are fun
 ```
 
 <b> Edit your existing README </b>
+
 If you run readmeMaker.py in a folder that already has a README, you will be prompted to either edit or overwrite the file. If you choose to edit the file, it will date stamp your README with the date and it will compare your previous manifest with the current file directory manifest. It will remove anything you've deleted from your manifest from the README and prompt you to describe any new files to add to the updated README.
