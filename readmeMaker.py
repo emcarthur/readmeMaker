@@ -94,7 +94,7 @@ else: # edit existing readme
                         if file_in_manifest in manifest: # if the file in directory already exists in manifest dict
                             if manifest[file_in_manifest] == "": # if description is empty
                                 print('Describe the function/usage of (or \'rm\' to ignore) file: ' \
-                                    + f.lstrip())
+                                    + f.lstrip() + ':')
                                 file_descrip = input()
                                 if not(file_descrip == 'rm'):
                                     f_out.write(file_in_manifest + '\t'
@@ -103,11 +103,12 @@ else: # edit existing readme
                                 f_out.write(file_in_manifest + '\t'
                                     + manifest[file_in_manifest] + '\n')
                         else: # if the file in directory did not exist already, ask for function
-                            print('Describe the function/usage of file ' \
+                            print('Describe the function/usage of (or \'rm\' to ignore) file ' \
                                 + file_in_manifest + ':')
                             file_descrip = input()
-                            f_out.write(file_in_manifest + '\t'
-                                    + file_descrip + '\n')
+                            if not(file_descrip == 'rm'):
+                                f_out.write(file_in_manifest + '\t'
+                                        + file_descrip + '\n')
     f_in.close()
     f_out.close()
 
